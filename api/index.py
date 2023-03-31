@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import cv2
 
 app = Flask(__name__)
+camera=cv2.VideoCapture(0)
 
 @app.route('/', methods=['GET','POST'])
 def scrape():
@@ -38,8 +39,6 @@ def scrape():
     
     return render_template("index.html", output=data)
 
-camera=cv2.VideoCapture(0)
-
 def generate_frames():
     while True:
             
@@ -52,3 +51,4 @@ def generate_frames():
 @app.route('/video')
 def video():
     return Response(generate_frames(),mimetype='multipart/x-mixed-replace; boundary=frame')
+
