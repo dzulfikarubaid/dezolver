@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dezolver</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
+</head>
+<body>
+    <div class="box">
+        <h3 class="title">DEZOLVER</h3>
+        <form method="POST" action="/scrape">
+            <input class="url" type="text" name="q-url" id="">
+            <button class="button" type="submit">Generate</button>
+        </form>
+        {%if output%}
+        <a class="answer" href="{{ output }}" target="_blank">Answer</a>
+        {%else%}
+        <p>The Video Doesn't Exist</p>
+        {% endif %}
+    </div>
+</body>
+</html>
