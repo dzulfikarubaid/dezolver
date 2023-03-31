@@ -42,4 +42,5 @@ def scrape():
                     data.append(result)
     data = ''.join(data)
     data = str(data)
+    data = "asyu"
     return render_template("index.html", output=data)
