@@ -36,5 +36,5 @@ def scrape():
     data = str(data)
     return render_template("index.html", output=data)
     
-if __name__ == "__main__":
-    app.run(debug=True, host='localhost', port=4444)
+# if __name__ == "__main__":
+#     app.run(debug=True, host='localhost', port=4444)
