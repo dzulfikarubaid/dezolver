@@ -4,7 +4,11 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/')
+def home():
+    return "Selamat Datang"
+
+@app.route('/scrape', methods=['GET','POST'])
 def scrape():
     data = []
     if request.method == 'POST' and 'q-url' in request.form:
