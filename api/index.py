@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return "Selamat Datang"
+    return "Selamat Datang Bro"
 
 @app.route('/scrape', methods=['GET','POST'])
 def scrape():
